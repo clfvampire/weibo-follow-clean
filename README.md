@@ -7,8 +7,15 @@ weibo-follow-clean
 因为登录需要验证码 + 个人能力问题没有集成登录功能，需要手动填写cookie
   ←  于是反正执行的时候会提示填写的
 
+![](https://github.com/TimeCompass/weibo-follow-clean/blob/master/img/cookie.png)
+SUB="你需要复制的内容";
+在 = 和 ; 之间
+
 同样的理由需要填写用户的数字ID
   ←  于是反正执行的时候会提示填写的
+
+![](https://github.com/TimeCompass/weibo-follow-clean/blob/master/img/id.png)
+没错就是那串数字
 
   ←  所以反正你直接在脚本里改掉注释掉提示也一样
 
