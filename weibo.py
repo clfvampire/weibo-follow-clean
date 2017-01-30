@@ -1,6 +1,6 @@
-'''weibo'''
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+'''weibo'''
 
 import time
 import json
@@ -46,6 +46,9 @@ def remove(nick, uid):
     tmp = requests.post(
         url=UNURL.format(t=time.time()), data=fandata, headers=HEADERS, cookies=COOKIES).json()
     if tmp.get('code') == "100000":
+        # 安全起见留个档，起码你知道误删了谁 _(:з)∠)_
+        with open('delete.txt', 'a', encoding='utf-8') as file:
+            file.write(u"移除粉丝 {0} 成功\n".format(nick))
         print(u"移除粉丝 {0} 成功".format(nick))
     else:
         print(u"移除粉丝 {0} 失败，请尝试重新获取cookies".format(nick))
